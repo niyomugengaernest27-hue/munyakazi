@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #1e3a8a;
+    background-color: orange;
     color: white;
     padding: 2rem;
     text-align: center;
@@ -44,7 +44,7 @@ header h1 {
 
 .card h2 {
     margin-bottom: 1rem;
-    color: #1e3a8a;
+    color: blue;
 }
 
 .input-group {
