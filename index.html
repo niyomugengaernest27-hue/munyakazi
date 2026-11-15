@@ -1,51 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>munyakazi space shop</title>
+    <meta name="description" content="Discover the Innovation and Learning Center at Agahozo-Shalom Youth Village.">
+    <title>ILC | Innovation and Learning Center</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   
-<header>
-       <a href="ernest.html"> <h1>Munyakazi Work Space</h1></a>
-    
-        <p>Organize your tasks, notes, and daily workflow in one place.</p>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">ILC<span>.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#impact">Our Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
- <form class="form">
-<label>Name: 
-    <input required type="text" placeholder="ernest munyakazi">
-</label>
-        <label>Email: 
-           <input required type="email" placeholder="ernest@gmail.com">
-        </label>
-        
-    </form>
-    
-    <main class="container">
-        <!-- Task Manager Section -->
-        <section class="card">
-             <a href="iflame.html">
-                 <h2>Task Board</h2>
-             </a>
-            <div class="input-group">
-                <input type="text" id="taskInput" placeholder="Add a new task..." required>
-                <button onclick="addTask()">Add</button>
+    <!-- Home Section -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="welcome">WELCOME TO ILC</p>
+
+                <h1>
+                    Discover a Place Where
+                    <span>Ideas Become Reality</span>
+                </h1>
+
+                <p class="hero-description">
+                    Welcome to the Innovation and Learning Center
+                    at Agahozo-Shalom Youth Village, Rwanda.
+                    Discover opportunities for learning, creativity
+                    and innovation.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#about" class="btn primary-btn">
+                        Discover ILC
+                    </a>
+
+                    <a href="#contact" class="btn secondary-btn">
+                        Get In Touch
+                    </a>
+                </div>
             </div>
-            <ul id="taskList"></ul>
+
+            <div class="hero-card">
+                <div class="card-icon">✦</div>
+                <h2>Learn. Create. Innovate.</h2>
+                <p>
+                    Inspiring curiosity, developing ideas and
+                    creating opportunities for the future.
+                </p>
+            </div>
         </section>
 
-        <!-- Quick Notes Section -->
-        <section class="card">
-            <h2>Quick Notes</h2>
-            <textarea id="noteArea" placeholder="Write your project ideas or reminders here..."></textarea>
-            <button class="save-btn" onclick="saveNote()">Save Note</button>
-            <p id="statusMsg" class="status"></p>
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="section-heading">
+                <p class="small-title">WHO WE ARE</p>
+                <h2>About <span>ILC</span></h2>
+            </div>
+
+            <p class="about-text">
+                The Innovation and Learning Center (ILC) is located
+                at Agahozo-Shalom Youth Village in Rwanda.
+                This website introduces the center and helps more
+                people discover its work, opportunities and activities.
+            </p>
+
+            <a href="#contact" class="text-link">Learn More →</a>
+        </section>
+
+        <!-- Programs Section -->
+        <section class="programs section" id="programs">
+            <div class="section-heading">
+                <p class="small-title">EXPLORE ILC</p>
+                <h2>Discover What We <span>Offer</span></h2>
+                <p>Explore the opportunities and activities at ILC.</p>
+            </div>
+
+            <div class="program-grid">
+                <article class="program-card">
+                    <div class="program-icon">01</div>
+                    <h3>Learning</h3>
+                    <p>
+                        Discover learning opportunities and educational
+                        activities at ILC.
+                    </p>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-icon">02</div>
+                    <h3>Innovation</h3>
+                    <p>
+                        Explore creativity, new ideas and innovative
+                        thinking.
+                    </p>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-icon">03</div>
+                    <h3>Community</h3>
+                    <p>
+                        Learn about the center and its connection
+                        with the wider community.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact section" id="impact">
+            <p class="small-title">OUR PURPOSE</p>
+            <h2>Inspiring a Better Future</h2>
+            <p>
+                We want more people to know about ILC, discover
+                its opportunities and connect with the center.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="section-heading">
+                <p class="small-title">GET CONNECTED</p>
+                <h2>Connect With <span>ILC</span></h2>
+                <p>
+                    Interested in learning more about ILC?
+                    Get in touch with us.
+                </p>
+            </div>
+
+            <a href="mailto:YOUR-ILC-EMAIL@example.com"
+               class="btn primary-btn">
+                Contact Us
+            </a>
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer>
+        <h2>ILC<span>.</span></h2>
+        <p>Intore and Learning Center</p>
+        <p>Agahozo-Shalom Youth Village | Rwanda</p>
+
+        <p class="copyright">
+            &copy; <span id="year"></span> ILC. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
