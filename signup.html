@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Intore Learning Center</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="signup-body">
+
+    <main class="signup-container">
+
+        <!-- LEFT SIDE -->
+        <div class="signup-info">
+
+            <h1>ILC<span>.</span></h1>
+
+            <p class="signup-subtitle">
+                INTORE LEARNING CENTER
+            </p>
+
+            <h2>Join Our Community!</h2>
+
+            <p>
+                Become part of the Intore Learning Center
+                community. Create your account and stay
+                connected with learning and development
+                opportunities.
+            </p>
+
+            <a href="index.html" class="back-link">
+                ← Back to Website
+            </a>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="signup-form-section">
+
+            <h2>Create Your Account</h2>
+
+            <p class="form-description">
+                Fill in your information to get started.
+            </p>
+
+            <form action="#" method="post">
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="signup-email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <!-- PHONE -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                    >
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="signup-password">Create Password</label>
+
+                    <input
+                        type="password"
+                        id="signup-password"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Confirm your password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <!-- TERMS AND CONDITIONS -->
+                <div class="terms">
+                    <label>
+                        <input type="checkbox" required>
+                        I agree to the terms and conditions.
+                    </label>
+                </div>
+
+                <!-- SIGN UP BUTTON -->
+                <button type="submit" class="signup-submit">
+                    Create Account
+                </button>
+
+            </form>
+
+            <!-- LOGIN LINK -->
+            <p class="login-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <footer class="signup-footer">
+        <p>
+            &copy; 2026 Intore Learning Center.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
