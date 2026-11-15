@@ -351,3 +351,56 @@ footer p {
         font-size: 29px;
     }
 }
+/* LOGIN AND SIGN UP BUTTONS */
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 20px;
+}
+
+.login-btn,
+.signup-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #123b59;
+    border: 2px solid #123b59;
+}
+
+.login-btn:hover {
+    background-color: #123b59;
+    color: white;
+}
+
+.signup-btn {
+    background-color: #f2b632;
+    color: #123b59;
+    border: 2px solid #f2b632;
+}
+
+.signup-btn:hover {
+    background-color: #176b68;
+    border-color: #176b68;
+    color: white;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .nav-auth {
+        margin: 15px 0 5px;
+        width: 100%;
+    }
+
+    .nav-auth a {
+        text-align: center;
+        flex: 1;
+    }
+}
