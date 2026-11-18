@@ -2,487 +2,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ILC | Your Stay, Your Experience</title>
+    <title>ILC | Book Your Stay</title>
+
     <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
 
-<header class="topbar">
-    <a href="index.html" class="brand">
-        <span class="brand-mark">ILC</span>
-        <span>
-            <strong>INTORE</strong>
-            <small>LEARNING CENTER</small>
-        </span>
-    </a>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#reservation">Reservations</a>
-        <a href="#contact">Contact</a>
-        <button id="logoutButton" class="logout">Log out</button>
-    </nav>
-</header>
-
-<main>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="eyebrow">WELCOME TO INTORE LEARNING CENTER</span>
-
-            <h1>More than a stay.<br>
-                <em>A place to belong.</em>
-            </h1>
-
-            <p>
-                Whether you are visiting for a few hours or planning
-                a longer stay, discover comfort, hospitality and
-                meaningful experiences at ILC.
-            </p>
-
-            <div class="hero-actions">
-                <a href="#reservation" class="primary-btn">Plan your visit <span>→</span></a>
-                <a href="#experiences" class="text-link">Explore our experiences</a>
-            </div>
-
-            <div class="hero-note">
-                <span class="online-dot"></span>
-                Your ILC experience starts here
+    <header class="navbar">
+        <div class="logo">
+            <span>ILC</span>
+            <div>
+                <h2>Intore Learning Center</h2>
+                <small>Hospitality & Accommodation</small>
             </div>
         </div>
 
-        <div class="hero-art">
-            <div class="art-circle circle-one"></div>
-            <div class="art-circle circle-two"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#accommodation">Accommodation</a>
+            <a href="#booking">Book Now</a>
+            <button id="logoutButton" class="logout-btn">Logout</button>
+        </nav>
+    </header>
 
-            <div class="art-card">
-                <span class="art-symbol">✦</span>
-                <p>WELCOME</p>
-                <h2>Your space.<br>Your comfort.</h2>
-                <div class="art-line"></div>
-                <small>INTore Learning Center</small>
-            </div>
+    <main>
 
-            <div class="floating-note">
-                <span>✧</span>
-                Hospitality with purpose
-            </div>
-        </div>
-    </section>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="welcome-label">WELCOME TO ILC</span>
 
-    <!-- INTRODUCTION -->
-    <section class="intro-strip">
-        <div>
-            <span class="strip-number">01</span>
-            <p>Choose your experience</p>
-        </div>
-        <div>
-            <span class="strip-number">02</span>
-            <p>Personalize your stay</p>
-        </div>
-        <div>
-            <span class="strip-number">03</span>
-            <p>Review your reservation</p>
-        </div>
-    </section>
+                <h1>Your Comfort,<br>
+                    Our Priority.</h1>
 
-    <!-- EXPERIENCES -->
-    <section class="experiences section" id="experiences">
-
-        <div class="section-title">
-            <span class="eyebrow">DISCOVER ILC</span>
-            <h2>Find your perfect experience.</h2>
-            <p>Choose the option that matches your plans.</p>
-        </div>
-
-        <div class="experience-grid">
-
-            <article class="experience-card">
-                <div class="experience-icon">⌂</div>
-                <span class="card-label">PERSONAL COMFORT</span>
-                <h3>Private Room</h3>
                 <p>
-                    Enjoy your own comfortable space for rest,
-                    privacy and relaxation.
+                    Welcome to Intore Learning Center. Choose your
+                    accommodation, plan your stay and enjoy our
+                    hospitality services.
                 </p>
-                <a href="#reservation" data-select="room">Choose a room →</a>
-            </article>
 
-            <article class="experience-card highlighted">
-                <div class="popular-tag">FEATURED EXPERIENCE</div>
-                <div class="experience-icon">⌂</div>
-                <span class="card-label">A HOME AWAY FROM HOME</span>
-                <h3>Guest House</h3>
-                <p>
-                    Enjoy a welcoming accommodation experience
-                    for yourself, family or friends.
-                </p>
-                <a href="#reservation" data-select="guesthouse">Explore guest house →</a>
-            </article>
+                <a href="#booking" class="hero-btn">Plan Your Stay</a>
+            </div>
 
-            <article class="experience-card">
-                <div class="experience-icon">☼</div>
-                <span class="card-label">FLEXIBLE VISIT</span>
-                <h3>Day Visit</h3>
-                <p>
-                    Come for a few hours without booking
-                    overnight accommodation.
-                </p>
-                <a href="#reservation" data-select="day">Plan a day visit →</a>
-            </article>
+            <div class="hero-card">
+                <h3>Discover ILC</h3>
+                <p>A comfortable place to stay, relax and connect.</p>
+                <div class="hero-icon">🏨</div>
+            </div>
+        </section>
 
-        </div>
-    </section>
+        <section class="services" id="accommodation">
 
-    <!-- BOOKING EXPERIENCE -->
-    <section class="reservation-section" id="reservation">
+            <div class="section-heading">
+                <span>OUR SERVICES</span>
+                <h2>Choose Your Experience</h2>
+                <p>Select the accommodation that suits your needs.</p>
+            </div>
 
-        <div class="reservation-heading">
-            <span class="eyebrow">YOUR EXPERIENCE, YOUR WAY</span>
-            <h2>Let's plan something special.</h2>
-            <p>Complete your preferences below to review your reservation.</p>
-        </div>
+            <div class="service-container">
 
-        <div class="booking-layout">
-
-            <form id="bookingForm" class="booking-form">
-
-                <div class="form-heading">
-                    <span class="step">01</span>
-                    <div>
-                        <h3>Choose your stay</h3>
-                        <p>What kind of experience are you looking for?</p>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">🛏️</div>
+                    <h3>Private Room</h3>
+                    <p>
+                        Enjoy a comfortable private room
+                        during your visit.
+                    </p>
+                    <a href="#booking">Choose Room</a>
                 </div>
 
-                <input type="hidden" id="accommodationType" value="">
-
-                <div class="stay-options">
-
-                    <button type="button" class="stay-option" data-stay="room">
-                        <span class="stay-icon">⌂</span>
-                        <strong>Private Room</strong>
-                        <small>Personal accommodation</small>
-                        <span class="radio-mark"></span>
-                    </button>
-
-                    <button type="button" class="stay-option" data-stay="guesthouse">
-                        <span class="stay-icon">⌂</span>
-                        <strong>Guest House</strong>
-                        <small>Welcoming accommodation</small>
-                        <span class="radio-mark"></span>
-                    </button>
-
-                    <button type="button" class="stay-option" data-stay="day">
-                        <span class="stay-icon">☼</span>
-                        <strong>Day Visit</strong>
-                        <small>No accommodation needed</small>
-                        <span class="radio-mark"></span>
-                    </button>
-
+                <div class="service-card featured">
+                    <div class="service-icon">🏡</div>
+                    <h3>Guest House</h3>
+                    <p>
+                        Experience a welcoming guest house
+                        for a relaxing stay.
+                    </p>
+                    <a href="#booking">Choose Guest House</a>
                 </div>
 
-                <div class="form-divider"></div>
-
-                <div class="form-heading">
-                    <span class="step">02</span>
-                    <div>
-                        <h3>Customize your visit</h3>
-                        <p>Tell us when you are coming and who is joining you.</p>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">☀️</div>
+                    <h3>Day Visit</h3>
+                    <p>
+                        Visit ILC without booking a room
+                        or guest house.
+                    </p>
+                    <a href="#booking">Choose Day Visit</a>
                 </div>
 
-                <div class="field-grid">
+            </div>
+        </section>
 
-                    <div class="field">
-                        <label for="visitDate">Arrival date</label>
-                        <input type="date" id="visitDate" required>
-                    </div>
+        <section class="booking-section" id="booking">
 
-                    <div class="field">
-                        <label for="arrivalTime">Arrival time</label>
-                        <input type="time" id="arrivalTime" required>
-                    </div>
+            <div class="booking-intro">
+                <span>MAKE A RESERVATION</span>
+                <h2>Plan Your Visit</h2>
+                <p>
+                    Tell us what you need. Select your preferences
+                    below to prepare your booking.
+                </p>
+            </div>
 
-                    <div class="field">
-                        <label for="durationType">Duration measured in</label>
-                        <select id="durationType" required>
-                            <option value="hours">Hours</option>
-                            <option value="nights">Nights</option>
+            <form id="bookingForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="accommodationType">
+                            Accommodation Type
+                        </label>
+
+                        <select id="accommodationType" required>
+                            <option value="">Choose accommodation</option>
+                            <option value="Private Room">Private Room</option>
+                            <option value="Guest House">Guest House</option>
+                            <option value="Day Visit">No Accommodation (Day Visit)</option>
                         </select>
                     </div>
 
-                    <div class="field">
-                        <label for="duration">How long will you stay?</label>
-                        <input type="number" id="duration" min="1" max="365" value="4" required>
-                        <small id="durationHint">Enter the number of hours.</small>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+
+                        <input
+                            type="number"
+                            id="guests"
+                            min="1"
+                            value="1"
+                            required
+                        >
                     </div>
 
                 </div>
 
-                <div class="field guest-field">
-                    <label>Number of guests</label>
+                <div class="form-row">
 
-                    <div class="guest-control">
-                        <button type="button" id="decreaseGuests" aria-label="Decrease guests">−</button>
-                        <strong id="guestCount">1</strong>
-                        <button type="button" id="increaseGuests" aria-label="Increase guests">+</button>
+                    <div class="form-group">
+                        <label for="visitDate">Visit Date</label>
+
+                        <input
+                            type="date"
+                            id="visitDate"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hours">Duration of Stay</label>
+
+                        <select id="hours" required>
+                            <option value="">Choose duration</option>
+                            <option value="2 hours">2 Hours</option>
+                            <option value="4 hours">4 Hours</option>
+                            <option value="6 hours">6 Hours</option>
+                            <option value="8 hours">8 Hours</option>
+                            <option value="12 hours">12 Hours</option>
+                            <option value="24 hours">24 Hours</option>
+                            <option value="More than 24 hours">More than 24 Hours</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Services</label>
+
+                    <div class="extra-options">
+                        <label>
+                            <input type="checkbox" name="extras" value="Meals">
+                            Meals
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="extras" value="Meeting Space">
+                            Meeting Space
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="extras" value="Tour">
+                            Tour
+                        </label>
                     </div>
                 </div>
 
-                <div class="form-divider"></div>
+                <div class="form-group">
+                    <label for="requests">Other Requests</label>
 
-                <div class="form-heading">
-                    <span class="step">03</span>
-                    <div>
-                        <h3>Add something extra</h3>
-                        <p>Select any additional services you may need.</p>
-                    </div>
+                    <textarea
+                        id="requests"
+                        rows="4"
+                        placeholder="Tell us about any special requirements..."
+                    ></textarea>
                 </div>
 
-                <div class="extras-grid">
-                    <label class="extra-item">
-                        <input type="checkbox" name="extras" value="Meals">
-                        <span>🍽️</span>
-                        <strong>Meals</strong>
-                    </label>
-
-                    <label class="extra-item">
-                        <input type="checkbox" name="extras" value="Meeting facilities">
-                        <span>💼</span>
-                        <strong>Meeting facilities</strong>
-                    </label>
-
-                    <label class="extra-item">
-                        <input type="checkbox" name="extras" value="Tour">
-                        <span>🧭</span>
-                        <strong>Tour</strong>
-                    </label>
-
-                    <label class="extra-item">
-                        <input type="checkbox" name="extras" value="Relaxation">
-                        <span>🌿</span>
-                        <strong>Relaxation</strong>
-                    </label>
-                </div>
-
-                <div class="field requests-field">
-                    <label for="requests">Special requests</label>
-                    <textarea id="requests" rows="4"
-                        placeholder="Is there anything else we should know about your visit?"></textarea>
-                </div>
-
-                <button type="submit" class="review-btn">
-                    Review my reservation <span>→</span>
+                <button type="submit" class="booking-btn">
+                    Review My Booking
                 </button>
 
                 <p id="bookingMessage" role="status"></p>
 
             </form>
+        </section>
 
-            <!-- SUMMARY PANEL -->
-            <aside class="summary-panel">
-                <div class="summary-top">
-                    <span class="eyebrow">YOUR PLANNING SPACE</span>
-                    <h3>Your visit<br>at a glance.</h3>
-                    <p>Your selections will appear here as you complete the form.</p>
-                </div>
+    </main>
 
-                <div class="summary-content">
-                    <div class="summary-line">
-                        <span>Experience</span>
-                        <strong id="summaryStay">Not selected</strong>
-                    </div>
+    <footer>
+        <h3>Intore Learning Center</h3>
+        <p>Experience comfort. Experience hospitality.</p>
+        <p>&copy; 2026 ILC. All Rights Reserved.</p>
+    </footer>
 
-                    <div class="summary-line">
-                        <span>Arrival</span>
-                        <strong id="summaryDate">Not selected</strong>
-                    </div>
+    <script type="module" src="js/auth.js"></script>
 
-                    <div class="summary-line">
-                        <span>Time</span>
-                        <strong id="summaryTime">Not selected</strong>
-                    </div>
+    <script>
+        const bookingForm = document.getElementById("bookingForm");
+        const bookingMessage = document.getElementById("bookingMessage");
 
-                    <div class="summary-line">
-                        <span>Duration</span>
-                        <strong id="summaryDuration">4 hours</strong>
-                    </div>
+        bookingForm.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-                    <div class="summary-line">
-                        <span>Guests</span>
-                        <strong id="summaryGuests">1 guest</strong>
-                    </div>
+            const accommodation =
+                document.getElementById("accommodationType").value;
 
-                    <div class="summary-line">
-                        <span>Extra services</span>
-                        <strong id="summaryExtras">None selected</strong>
-                    </div>
-                </div>
+            const guests = document.getElementById("guests").value;
+            const date = document.getElementById("visitDate").value;
+            const hours = document.getElementById("hours").value;
 
-                <div class="summary-bottom">
-                    <span>YOUR NEXT STEP</span>
-                    <p>Review your choices and send your reservation request to ILC.</p>
-                    <div class="summary-decoration">✦</div>
-                </div>
-            </aside>
+            const extras = Array.from(
+                document.querySelectorAll('input[name="extras"]:checked')
+            ).map(item => item.value);
 
-        </div>
-    </section>
+            bookingMessage.textContent =
+                "Your selection: " + accommodation +
+                " | Guests: " + guests +
+                " | Date: " + date +
+                " | Duration: " + hours +
+                " | Additional services: " +
+                (extras.length ? extras.join(", ") : "None") +
+                ". Your choices are ready for review.";
 
-    <!-- CALL TO ACTION -->
-    <section class="closing-section" id="contact">
-        <span class="eyebrow">WE LOOK FORWARD TO WELCOMING YOU</span>
-        <h2>Make your next visit memorable.</h2>
-        <p>Have a question or a special request? Our team is ready to help.</p>
-        <a href="mailto:ilc@example.com" class="contact-btn">Contact ILC →</a>
-        <small>Replace this example email with the official ILC contact address.</small>
-    </section>
-
-</main>
-
-<footer>
-    <a href="index.html" class="footer-brand">INTORE LEARNING CENTER</a>
-    <p>Hospitality. Comfort. Connection.</p>
-    <p>© 2026 Intore Learning Center. All rights reserved.</p>
-</footer>
-
-<script type="module" src="js/auth.js"></script>
-
-<script>
-    const stayOptions = document.querySelectorAll(".stay-option");
-    const accommodationInput = document.getElementById("accommodationType");
-    const durationType = document.getElementById("durationType");
-    const durationInput = document.getElementById("duration");
-    const durationHint = document.getElementById("durationHint");
-    const guestCountDisplay = document.getElementById("guestCount");
-    const bookingForm = document.getElementById("bookingForm");
-    const bookingMessage = document.getElementById("bookingMessage");
-
-    let guests = 1;
-
-    const stayNames = {
-        room: "Private Room",
-        guesthouse: "Guest House",
-        day: "Day Visit"
-    };
-
-    function updateSummary() {
-        const stay = accommodationInput.value;
-        const date = document.getElementById("visitDate").value;
-        const time = document.getElementById("arrivalTime").value;
-        const duration = durationInput.value;
-        const unit = durationType.value;
-        const extras = [...document.querySelectorAll('input[name="extras"]:checked')]
-            .map(item => item.value);
-
-        document.getElementById("summaryStay").textContent =
-            stayNames[stay] || "Not selected";
-
-        document.getElementById("summaryDate").textContent =
-            date || "Not selected";
-
-        document.getElementById("summaryTime").textContent =
-            time || "Not selected";
-
-        document.getElementById("summaryDuration").textContent =
-            duration ? `${duration} ${unit}` : "Not selected";
-
-        document.getElementById("summaryGuests").textContent =
-            `${guests} ${guests === 1 ? "guest" : "guests"}`;
-
-        document.getElementById("summaryExtras").textContent =
-            extras.length ? extras.join(", ") : "None selected";
-    }
-
-    stayOptions.forEach(option => {
-        option.addEventListener("click", () => {
-            stayOptions.forEach(item => item.classList.remove("selected"));
-            option.classList.add("selected");
-            accommodationInput.value = option.dataset.stay;
-            updateSummary();
+            bookingMessage.style.color = "#176b43";
         });
-    });
-
-    document.querySelectorAll("[data-select]").forEach(link => {
-        link.addEventListener("click", () => {
-            const chosen = link.dataset.select;
-            const matchingOption = document.querySelector(`[data-stay="${chosen}"]`);
-            if (matchingOption) matchingOption.click();
-        });
-    });
-
-    document.getElementById("increaseGuests").addEventListener("click", () => {
-        guests = Math.min(guests + 1, 30);
-        guestCountDisplay.textContent = guests;
-        updateSummary();
-    });
-
-    document.getElementById("decreaseGuests").addEventListener("click", () => {
-        guests = Math.max(guests - 1, 1);
-        guestCountDisplay.textContent = guests;
-        updateSummary();
-    });
-
-    durationType.addEventListener("change", () => {
-        const unit = durationType.value;
-        durationInput.value = unit === "hours" ? 4 : 1;
-        durationHint.textContent = unit === "hours"
-            ? "Enter the number of hours."
-            : "Enter the number of nights.";
-        updateSummary();
-    });
-
-    bookingForm.addEventListener("input", updateSummary);
-    bookingForm.addEventListener("change", updateSummary);
-
-    bookingForm.addEventListener("submit", event => {
-        event.preventDefault();
-
-        if (!accommodationInput.value) {
-            bookingMessage.textContent = "Please choose an accommodation option first.";
-            bookingMessage.className = "message-error";
-            return;
-        }
-
-        updateSummary();
-
-        const extras = [...document.querySelectorAll('input[name="extras"]:checked')]
-            .map(item => item.value);
-
-        const reservation = {
-            accommodation: stayNames[accommodationInput.value],
-            date: document.getElementById("visitDate").value,
-            arrivalTime: document.getElementById("arrivalTime").value,
-            duration: durationInput.value + " " + durationType.value,
-            guests,
-            extras,
-            requests: document.getElementById("requests").value
-        };
-
-        sessionStorage.setItem("ilcReservationPreview", JSON.stringify(reservation));
-
-        bookingMessage.textContent =
-            "Your reservation details are ready for review. Please contact ILC to confirm availability.";
-        bookingMessage.className = "message-success";
-    });
-
-    const dateInput = document.getElementById("visitDate");
-    const today = new Date();
-    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
-        .toISOString().split("T")[0];
-    dateInput.min = localToday;
-
-    updateSummary();
-</script>
+    </script>
 
 </body>
 </html>
