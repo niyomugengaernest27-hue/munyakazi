@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +13,8 @@
 
 <body class="signup-body">
 
-    <script type="module" src="js/auth.js"></script>
-
     <main class="signup-container">
 
-        <!-- LEFT SIDE -->
         <div class="signup-info">
 
             <h1>ILC<span>.</span></h1>
@@ -40,7 +38,6 @@
 
         </div>
 
-        <!-- RIGHT SIDE -->
         <div class="signup-form-section">
 
             <h2>Create Your Account</h2>
@@ -49,75 +46,41 @@
                 Fill in your information to get started.
             </p>
 
-            <form action="#" method="post">
+            <form id="signupForm">
 
-                <!-- FULL NAME -->
                 <div class="form-group">
-                    <label for="fullname">Full Name</label>
-
-                    <input
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        placeholder="Enter your full name"
-                        required
-                    >
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="fullname"
+                        placeholder="Enter your full name" required>
                 </div>
 
-                <!-- EMAIL -->
                 <div class="form-group">
-                    <label for="signup-email">Email Address</label>
-
-                    <input
-                        type="email"
-                        id="signup-email"
-                        name="email"
-                        placeholder="Enter your email"
-                        required
-                    >
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="Enter your email" required>
                 </div>
 
-                <!-- PHONE -->
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                    >
+                    <input type="tel" id="phone" name="phone"
+                        placeholder="Enter your phone number">
                 </div>
 
-                <!-- PASSWORD -->
                 <div class="form-group">
-                    <label for="signup-password">Create Password</label>
-
-                    <input
-                        type="password"
-                        id="signup-password"
-                        name="password"
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password" name="password"
                         placeholder="Create a password"
-                        minlength="8"
-                        required
-                    >
+                        minlength="8" required>
                 </div>
 
-                <!-- CONFIRM PASSWORD -->
                 <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-
-                    <input
-                        type="password"
-                        id="confirm-password"
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword"
                         name="confirm-password"
                         placeholder="Confirm your password"
-                        minlength="8"
-                        required
-                    >
+                        minlength="8" required>
                 </div>
 
-                <!-- TERMS AND CONDITIONS -->
                 <div class="terms">
                     <label>
                         <input type="checkbox" required>
@@ -125,14 +88,14 @@
                     </label>
                 </div>
 
-                <!-- SIGN UP BUTTON -->
+                <p id="signupMessage" role="status"></p>
+
                 <button type="submit" class="signup-submit">
                     Create Account
                 </button>
 
             </form>
 
-            <!-- LOGIN LINK -->
             <p class="login-text">
                 Already have an account?
                 <a href="login.html">Login</a>
@@ -148,6 +111,8 @@
             All Rights Reserved.
         </p>
     </footer>
+
+    <script type="module" src="js/auth.js"></script>
 
 </body>
 </html>
