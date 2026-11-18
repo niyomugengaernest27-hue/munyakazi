@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +12,6 @@
 </head>
 
 <body class="login-body">
-
-    <script type="module" src="js/auth.js"></script>
 
     <!-- LOGIN CONTAINER -->
     <main class="login-container">
@@ -49,7 +48,7 @@
                 Please enter your details below.
             </p>
 
-            <form action="#" method="post">
+            <form id="loginForm">
 
                 <!-- EMAIL -->
                 <div class="form-group">
@@ -85,7 +84,7 @@
                         Remember me
                     </label>
 
-                    <a href="#" class="forgot-password">
+                    <a href="#" id="resetPassword" class="forgot-password">
                         Forgot password?
                     </a>
 
@@ -95,6 +94,8 @@
                 <button type="submit" class="login-submit">
                     Login
                 </button>
+
+                <p id="loginMessage" role="status"></p>
 
             </form>
 
@@ -114,6 +115,9 @@
             All Rights Reserved.
         </p>
     </footer>
+
+    <!-- FIREBASE JAVASCRIPT -->
+    <script type="module" src="js/auth.js"></script>
 
 </body>
 </html>
