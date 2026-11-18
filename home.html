@@ -1,188 +1,254 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Intore Learning Center | ILC</title>
+    <title>ILC | Book Your Stay</title>
 
-    <!-- Connect CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
 
+    <header class="navbar">
+        <div class="logo">
+            <span>ILC</span>
+            <div>
+                <h2>Intore Learning Center</h2>
+                <small>Hospitality & Accommodation</small>
+            </div>
+        </div>
 
-<!-- ABOUT INTORE LEARNING CENTER -->
-<section class="section about" id="about">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#accommodation">Accommodation</a>
+            <a href="#booking">Book Now</a>
+            <button id="logoutButton" class="logout-btn">Logout</button>
+        </nav>
+    </header>
 
-    <div class="section-heading">
-        <p class="small-title">GET TO KNOW US</p>
-        <h2>About Intore Learning Center</h2>
-    </div>
+    <main>
 
-    <p class="about-text">
-        Intore Learning Center (ILC) is located at
-        Agahozo-Shalom Youth Village in Rubona,
-        Rwamagana District, Eastern Province, Rwanda.
+        <section class="hero">
+            <div class="hero-content">
+                <span class="welcome-label">WELCOME TO ILC</span>
 
-        It provides a space for learning, training,
-        discussions and activities that support
-        youth development.
-    </p>
+                <h1>Your Comfort,<br>
+                    Our Priority.</h1>
 
-    <p class="about-text">
-        The center is associated with activities that
-        help young people develop practical skills,
-        explore entrepreneurship, prepare for employment
-        and discover their creative talents.
-    </p>
+                <p>
+                    Welcome to Intore Learning Center. Choose your
+                    accommodation, plan your stay and enjoy our
+                    hospitality services.
+                </p>
 
-</section>
+                <a href="#booking" class="hero-btn">Plan Your Stay</a>
+            </div>
 
+            <div class="hero-card">
+                <h3>Discover ILC</h3>
+                <p>A comfortable place to stay, relax and connect.</p>
+                <div class="hero-icon">🏨</div>
+            </div>
+        </section>
 
-<!-- OUR ACTIVITIES -->
-<section class="section programs" id="activities">
+        <section class="services" id="accommodation">
 
-    <div class="section-heading">
-        <p class="small-title">WHAT HAPPENS AT ILC?</p>
-        <h2>Learning Beyond the Classroom</h2>
-        <p>
-            Discover the different areas of learning
-            and development associated with ILC.
-        </p>
-    </div>
+            <div class="section-heading">
+                <span>OUR SERVICES</span>
+                <h2>Choose Your Experience</h2>
+                <p>Select the accommodation that suits your needs.</p>
+            </div>
 
-    <div class="program-grid">
+            <div class="service-container">
 
-        <article class="program-card">
-            <div class="program-icon">01</div>
-            <h3>Career Development</h3>
-            <p>
-                Learning experiences and discussions
-                that help young people prepare for
-                employment and future careers.
-            </p>
-        </article>
+                <div class="service-card">
+                    <div class="service-icon">🛏️</div>
+                    <h3>Private Room</h3>
+                    <p>
+                        Enjoy a comfortable private room
+                        during your visit.
+                    </p>
+                    <a href="#booking">Choose Room</a>
+                </div>
 
-        <article class="program-card">
-            <div class="program-icon">02</div>
-            <h3>Entrepreneurship</h3>
-            <p>
-                Discovering business ideas,
-                self-employment and ways to
-                create opportunities.
-            </p>
-        </article>
+                <div class="service-card featured">
+                    <div class="service-icon">🏡</div>
+                    <h3>Guest House</h3>
+                    <p>
+                        Experience a welcoming guest house
+                        for a relaxing stay.
+                    </p>
+                    <a href="#booking">Choose Guest House</a>
+                </div>
 
-        <article class="program-card">
-            <div class="program-icon">03</div>
-            <h3>Financial Literacy</h3>
-            <p>
-                Developing knowledge about
-                financial management and
-                responsible decision-making.
-            </p>
-        </article>
+                <div class="service-card">
+                    <div class="service-icon">☀️</div>
+                    <h3>Day Visit</h3>
+                    <p>
+                        Visit ILC without booking a room
+                        or guest house.
+                    </p>
+                    <a href="#booking">Choose Day Visit</a>
+                </div>
 
-        <article class="program-card">
-            <div class="program-icon">04</div>
-            <h3>Arts and Creativity</h3>
-            <p>
-                Encouraging young people to
-                explore, develop and express
-                their creative talents.
-            </p>
-        </article>
+            </div>
+        </section>
 
-        <article class="program-card">
-            <div class="program-icon">05</div>
-            <h3>Workshops</h3>
-            <p>
-                Opportunities for discussions,
-                training and sharing knowledge
-                through learning sessions.
-            </p>
-        </article>
+        <section class="booking-section" id="booking">
 
-        <article class="program-card">
-            <div class="program-icon">06</div>
-            <h3>Youth Development</h3>
-            <p>
-                Supporting young people as they
-                develop knowledge, confidence
-                and practical skills.
-            </p>
-        </article>
+            <div class="booking-intro">
+                <span>MAKE A RESERVATION</span>
+                <h2>Plan Your Visit</h2>
+                <p>
+                    Tell us what you need. Select your preferences
+                    below to prepare your booking.
+                </p>
+            </div>
 
-    </div>
+            <form id="bookingForm">
 
-</section>
+                <div class="form-row">
 
+                    <div class="form-group">
+                        <label for="accommodationType">
+                            Accommodation Type
+                        </label>
 
-<!-- LOCATION -->
-<section class="section impact" id="location">
+                        <select id="accommodationType" required>
+                            <option value="">Choose accommodation</option>
+                            <option value="Private Room">Private Room</option>
+                            <option value="Guest House">Guest House</option>
+                            <option value="Day Visit">No Accommodation (Day Visit)</option>
+                        </select>
+                    </div>
 
-    <p class="small-title">OUR LOCATION</p>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
 
-    <h2>Find Us in Rubona, Rwanda</h2>
+                        <input
+                            type="number"
+                            id="guests"
+                            min="1"
+                            value="1"
+                            required
+                        >
+                    </div>
 
-    <p>
-        Intore Learning Center is located inside
-        Agahozo-Shalom Youth Village,
-        Rubona, Rwamagana District,
-        Eastern Province, Rwanda.
-    </p>
+                </div>
 
-    <p>
-        We invite interested visitors and organizations
-        to learn more about our center and its activities.
-    </p>
+                <div class="form-row">
 
-</section>
+                    <div class="form-group">
+                        <label for="visitDate">Visit Date</label>
 
+                        <input
+                            type="date"
+                            id="visitDate"
+                            required
+                        >
+                    </div>
 
-<!-- WHY ILC -->
-<section class="section about" id="why-ilc">
+                    <div class="form-group">
+                        <label for="hours">Duration of Stay</label>
 
-    <div class="section-heading">
-        <p class="small-title">OUR IMPORTANCE</p>
-        <h2>Why Intore Learning Center Matters</h2>
-    </div>
+                        <select id="hours" required>
+                            <option value="">Choose duration</option>
+                            <option value="2 hours">2 Hours</option>
+                            <option value="4 hours">4 Hours</option>
+                            <option value="6 hours">6 Hours</option>
+                            <option value="8 hours">8 Hours</option>
+                            <option value="12 hours">12 Hours</option>
+                            <option value="24 hours">24 Hours</option>
+                            <option value="More than 24 hours">More than 24 Hours</option>
+                        </select>
+                    </div>
 
-    <p class="about-text">
-        Learning and skills development can open doors
-        to new opportunities. Intore Learning Center
-        provides an environment where young people
-        can participate in learning experiences,
-        explore their talents and prepare for their future.
-    </p>
+                </div>
 
-</section>
+                <div class="form-group">
+                    <label>Additional Services</label>
 
+                    <div class="extra-options">
+                        <label>
+                            <input type="checkbox" name="extras" value="Meals">
+                            Meals
+                        </label>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
+                        <label>
+                            <input type="checkbox" name="extras" value="Meeting Space">
+                            Meeting Space
+                        </label>
 
-    <div class="section-heading">
-        <p class="small-title">GET IN TOUCH</p>
+                        <label>
+                            <input type="checkbox" name="extras" value="Tour">
+                            Tour
+                        </label>
+                    </div>
+                </div>
 
-        <h2>Discover Intore Learning Center</h2>
+                <div class="form-group">
+                    <label for="requests">Other Requests</label>
 
-        <p>
-            Would you like to know more about ILC,
-            its activities or opportunities for collaboration?
-            Contact Agahozo-Shalom Youth Village
-            to make an inquiry.
-        </p>
-    </div>
+                    <textarea
+                        id="requests"
+                        rows="4"
+                        placeholder="Tell us about any special requirements..."
+                    ></textarea>
+                </div>
 
-    <a href="https://www.asyv.org/"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="btn primary-btn">
-        Visit ASYV Website
-    </a>
+                <button type="submit" class="booking-btn">
+                    Review My Booking
+                </button>
 
-</section></body></html>
+                <p id="bookingMessage" role="status"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>Intore Learning Center</h3>
+        <p>Experience comfort. Experience hospitality.</p>
+        <p>&copy; 2026 ILC. All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="js/auth.js"></script>
+
+    <script>
+        const bookingForm = document.getElementById("bookingForm");
+        const bookingMessage = document.getElementById("bookingMessage");
+
+        bookingForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const accommodation =
+                document.getElementById("accommodationType").value;
+
+            const guests = document.getElementById("guests").value;
+            const date = document.getElementById("visitDate").value;
+            const hours = document.getElementById("hours").value;
+
+            const extras = Array.from(
+                document.querySelectorAll('input[name="extras"]:checked')
+            ).map(item => item.value);
+
+            bookingMessage.textContent =
+                "Your selection: " + accommodation +
+                " | Guests: " + guests +
+                " | Date: " + date +
+                " | Duration: " + hours +
+                " | Additional services: " +
+                (extras.length ? extras.join(", ") : "None") +
+                ". Your choices are ready for review.";
+
+            bookingMessage.style.color = "#176b43";
+        });
+    </script>
+
+</body>
+</html>
