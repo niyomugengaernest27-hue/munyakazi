@@ -5,21 +5,21 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-aut
 
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
 
-// ILC Firebase Configuration
 const firebaseConfig = {
-    apiKey: "YOUR_REAL_API_KEY",
-    authDomain: "YOUR_REAL_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_REAL_PROJECT_ID",
-    storageBucket: "YOUR_REAL_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_REAL_MESSAGING_SENDER_ID",
-    appId: "YOUR_REAL_APP_ID"
+    apiKey: "AIzaSyCZsJbNVS47Eq0menylW_QKrySem9AF8Yc",
+    authDomain: "ilc-advertisment.firebaseapp.com",
+    projectId: "ilc-advertisment",
+    storageBucket: "ilc-advertisment.firebasestorage.app",
+    messagingSenderId: "967263677839",
+    appId: "1:967263677839:web:6e2b0c6280ffb6eb832ffa",
+    measurementId: "G-3K8R7NFBD3"
 };
 
-// Start Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Firebase Authentication
+// Initialize Authentication
 export const auth = getAuth(app);
 
-// Firebase Database
+// Initialize Firestore
 export const db = getFirestore(app);
