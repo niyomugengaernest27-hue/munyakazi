@@ -16,21 +16,44 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
 
 
-// =====================================
+// ==========================================
+// DISPLAY FIREBASE ERROR MESSAGES
+// ==========================================
+
+function showError(error) {
+    const errors = {
+        "auth/email-already-in-use": "This email is already registered.",
+        "auth/invalid-email": "Please enter a valid email address.",
+        "auth/weak-password": "Your password is too weak.",
+        "auth/invalid-credential": "Incorrect email or password.",
+        "auth/user-not-found": "No account found with this email.",
+        "auth/wrong-password": "Incorrect password.",
+        "auth/unauthorized-domain": "This website domain is not authorized in Firebase.",
+        "auth/operation-not-allowed": "Email and Password sign-in is not enabled in Firebase.",
+        "permission-denied": "Database permission denied. Please check your Firestore rules.",
+        "unavailable": "Service temporarily unavailable. Please try again."
+    };
+
+    return errors[error.code] || error.message || "Something went wrong. Please try again.";
+}
+
+
+// ==========================================
 // STUDENT SIGN UP
-// =====================================
+// ==========================================
 
 const signupForm = document.getElementById("signupForm");
 
 if (signupForm) {
 
-    signupForm.addEventListener("submit", async (e) => {
+    signupForm.addEventListener("submit", async function(event) {
 
-        e.preventDefault();
+        event.preventDefault();
 
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const phone = document.getElementById("phone").value.trim();
+
         const password = document.getElementById("password").value;
         const confirmPassword = document.getElementById("confirmPassword").value;
 
@@ -52,7 +75,7 @@ if (signupForm) {
             button.disabled = true;
             message.textContent = "Creating your account...";
 
-            // Create Firebase Authentication account
+            // Create Firebase account
             const userCredential = await createUserWithEmailAndPassword(
                 auth,
                 email,
@@ -61,12 +84,12 @@ if (signupForm) {
 
             const user = userCredential.user;
 
-            // Save student's name in Authentication profile
+            // Update student's profile
             await updateProfile(user, {
                 displayName: name
             });
 
-            // Save student information in Firestore
+            // Save student details in Firestore
             await setDoc(doc(db, "students", user.uid), {
                 fullName: name,
                 email: email,
@@ -74,18 +97,16 @@ if (signupForm) {
                 createdAt: serverTimestamp()
             });
 
-            message.textContent = "Account created successfully!";
+            message.textContent = "Registration successful! Welcome to ILC.";
 
-            signupForm.reset();
-
-            // Go to the website homepage
+            // Open student homepage
             window.location.href = "home.html";
 
         } catch (error) {
 
-            console.error(error);
+            console.error("Signup error:", error);
 
-            message.textContent = error.message;
+            message.textContent = showError(error);
 
         } finally {
 
@@ -98,17 +119,17 @@ if (signupForm) {
 }
 
 
-// =====================================
+// ==========================================
 // STUDENT LOGIN
-// =====================================
+// ==========================================
 
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
 
-    loginForm.addEventListener("submit", async (e) => {
+    loginForm.addEventListener("submit", async function(event) {
 
-        e.preventDefault();
+        event.preventDefault();
 
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value;
@@ -119,8 +140,9 @@ if (loginForm) {
         try {
 
             button.disabled = true;
-            message.textContent = "Logging in...";
+            message.textContent = "Signing in...";
 
+            // Sign in student
             await signInWithEmailAndPassword(
                 auth,
                 email,
@@ -129,13 +151,14 @@ if (loginForm) {
 
             message.textContent = "Login successful!";
 
+            // Open student homepage
             window.location.href = "home.html";
 
         } catch (error) {
 
-            console.error(error);
+            console.error("Login error:", error);
 
-            message.textContent = "Login failed: " + error.message;
+            message.textContent = showError(error);
 
         } finally {
 
@@ -148,18 +171,19 @@ if (loginForm) {
 }
 
 
-// =====================================
+// ==========================================
 // FORGOT PASSWORD
-// =====================================
+// ==========================================
 
 const resetButton = document.getElementById("resetPassword");
 
 if (resetButton) {
 
-    resetButton.addEventListener("click", async () => {
+    resetButton.addEventListener("click", async function(event) {
+
+        event.preventDefault();
 
         const email = document.getElementById("email").value.trim();
-
         const message = document.getElementById("loginMessage");
 
         if (!email) {
@@ -171,13 +195,13 @@ if (resetButton) {
 
             await sendPasswordResetEmail(auth, email);
 
-            message.textContent = "Password reset email sent! Check your inbox.";
+            message.textContent = "Password reset email sent. Check your inbox.";
 
         } catch (error) {
 
-            console.error(error);
+            console.error("Password reset error:", error);
 
-            message.textContent = error.message;
+            message.textContent = showError(error);
 
         }
 
@@ -186,15 +210,15 @@ if (resetButton) {
 }
 
 
-// =====================================
-// LOGOUT
-// =====================================
+// ==========================================
+// STUDENT LOGOUT
+// ==========================================
 
 const logoutButton = document.getElementById("logoutButton");
 
 if (logoutButton) {
 
-    logoutButton.addEventListener("click", async () => {
+    logoutButton.addEventListener("click", async function() {
 
         try {
 
@@ -204,9 +228,9 @@ if (logoutButton) {
 
         } catch (error) {
 
-            console.error(error);
+            console.error("Logout error:", error);
 
-            alert("Could not log out. Please try again.");
+            alert(showError(error));
 
         }
 
